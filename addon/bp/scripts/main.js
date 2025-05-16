@@ -12,34 +12,56 @@ var CustomPlayerKillMobLoot = class {
     const { deadEntity, damageSource: { damagingEntity } } = entityDieAfterEvent;
     if (damagingEntity === void 0 || damagingEntity.typeId !== "minecraft:player")
       return;
-    console.log("Looking for type", deadEntity.typeId);
     const mob_entry = this.loot_table[deadEntity.typeId];
     if (mob_entry) {
       let mob_loot_array = null;
-      let mob_loot_chance = mob_entry.chance !== void 0 ? mob_entry.chance : 0.1;
-      let mob_loot_rolls = mob_entry.rolls !== void 0 ? mob_entry.rolls : 1;
       let mob_loot_player_drop = mob_entry.player_drop !== void 0 ? mob_entry.player_drop : false;
-      if (mob_entry.variants !== void 0) {
-        let variant_component = deadEntity.getComponent("minecraft:variant");
-        let mark_variant_component = deadEntity.getComponent("minecraft:mark_variant");
-        if (variant_component !== void 0 && mark_variant_component === void 0) {
-          let variant_id = variant_component.value;
-          console.log("Looking for variant", variant_id);
-          const variant = mob_entry.variants.find((v) => v.variant === variant_id);
-          if (variant) mob_loot_array = variant.loot;
-        } else if (variant_component !== void 0 && mark_variant_component !== void 0) {
-          let variant_id = variant_component.value;
-          let mark_id = mark_variant_component.value;
-          console.log("Looking for variant", variant_id, mark_id);
-          const variant = mob_entry.variants.find((v) => v.variant === variant_id && v.mark_variant === mark_id);
-          if (variant) mob_loot_array = variant.loot;
-        }
+      switch (mob_entry.type) {
+        case 0 /* Basic */:
+          mob_loot_array = mob_entry.loot;
+          break;
+        case 1 /* Variant */:
+          {
+            let vc = deadEntity.getComponent("minecraft:variant");
+            if (vc !== void 0) {
+              const variant = mob_entry.vars.find((v) => v.variant === vc.value);
+              if (variant) {
+                mob_loot_array = variant.loot;
+              }
+            }
+          }
+          break;
+        case 2 /* MarkVariant */:
+          {
+            let vc = deadEntity.getComponent("minecraft:variant");
+            let mv = deadEntity.getComponent("minecraft:mark_variant");
+            if (vc !== void 0 && mv !== void 0) {
+              const variant = mob_entry.mark_vars.find((v) => v.variant === vc.value && v.mark_variant === mv.value);
+              if (variant) {
+                mob_loot_array = variant.loot;
+              }
+            }
+          }
+          break;
+        case 3 /* ClimateVariant */:
+          {
+            let cv = deadEntity.getProperty("minecraft:climate_variant");
+            if (cv !== void 0) {
+              const variant = mob_entry.climate_vars.find((v) => v.climnate_variant === cv);
+              if (variant) {
+                mob_loot_array = variant.loot;
+                console.log("Climate Variant: ", cv);
+              }
+            }
+          }
+          break;
+        default:
+          break;
       }
-      if (mob_loot_array === null && mob_entry.loot !== void 0)
-        mob_loot_array = mob_entry.loot;
       if (mob_loot_array) {
-        const lootItem = this.get_random_loot(mob_loot_array, mob_loot_chance, mob_loot_rolls);
+        const lootItem = this.get_random_loot(mob_loot_array, mob_entry.chance, mob_entry.rolls);
         if (lootItem) {
+          console.log("Spawn loot: ", lootItem.itemId);
           if (mob_loot_player_drop)
             damagingEntity.dimension.spawnItem(new ItemStack(lootItem.itemId, lootItem.amount), damagingEntity.location);
           else
@@ -50,9 +72,7 @@ var CustomPlayerKillMobLoot = class {
   }
   get_random_loot(mob_loot_array, mob_loot_chance, mob_loot_rolls) {
     let random = Math.random();
-    console.log("random", random);
     if (random < mob_loot_chance) {
-      console.log("Mob Loot Will Drop...");
       let totalWeight = mob_loot_array.reduce((sum, lootItem) => sum + lootItem.weight, 0);
       let randomLootValue = Math.random() * totalWeight;
       for (let i = 0; i < mob_loot_rolls; i++) {
@@ -60,7 +80,6 @@ var CustomPlayerKillMobLoot = class {
         for (let lootItem of mob_loot_array) {
           weightSum += lootItem.weight;
           if (randomLootValue <= weightSum) {
-            console.log("Loot Drop: ", lootItem.itemId);
             return lootItem.itemId ? lootItem : null;
           }
         }
@@ -95,6 +114,7 @@ var mob_loot_table = {
   "minecraft:allay": {
     chance: 1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_allay", amount: 1, weight: 1 }
     ]
@@ -102,6 +122,7 @@ var mob_loot_table = {
   "minecraft:armadillo": {
     chance: 0.2,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_armadillo", amount: 1, weight: 1 },
       { itemId: "toy:toy_armadillo_rolled", amount: 1, weight: 1 }
@@ -110,7 +131,8 @@ var mob_loot_table = {
   "minecraft:axolotl": {
     chance: 0.1,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -146,6 +168,7 @@ var mob_loot_table = {
   "minecraft:bat": {
     chance: 1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_bat", amount: 1, weight: 1 }
     ]
@@ -153,6 +176,7 @@ var mob_loot_table = {
   "minecraft:bee": {
     chance: 0.2,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_bee", amount: 1, weight: 2 },
       { itemId: "toy:toy_bee_angry", amount: 1, weight: 1 }
@@ -161,6 +185,7 @@ var mob_loot_table = {
   "minecraft:blaze": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_blaze", amount: 1, weight: 1 }
     ]
@@ -168,6 +193,7 @@ var mob_loot_table = {
   "minecraft:bogged": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_bogged", amount: 1, weight: 1 }
     ]
@@ -175,6 +201,7 @@ var mob_loot_table = {
   "minecraft:breeze": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_breeze", amount: 1, weight: 1 }
     ]
@@ -182,6 +209,7 @@ var mob_loot_table = {
   "minecraft:camel": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_camel", amount: 1, weight: 2 },
       { itemId: "toy:toy_camel_saddled", amount: 1, weight: 1 }
@@ -190,7 +218,8 @@ var mob_loot_table = {
   "minecraft:cat": {
     chance: 1,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -262,14 +291,16 @@ var mob_loot_table = {
   "minecraft:cave_spider": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_cave_spider", amount: 1, weight: 1 }
     ]
   },
   "minecraft:chicken": {
-    chance: 0.05,
+    chance: 1.05,
     rolls: 1,
-    variants: [
+    type: 3 /* ClimateVariant */,
+    climate_vars: [
       {
         climnate_variant: "temperate",
         loot: [
@@ -288,23 +319,21 @@ var mob_loot_table = {
           { itemId: "toy:toy_chicken_cold", amount: 1, weight: 1 }
         ]
       }
-    ],
-    /* fallback for pre-1.21.70 chicken */
-    loot: [
-      { itemId: "toy:toy_chicken", amount: 1, weight: 1 }
     ]
   },
   "minecraft:cod": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_cod", amount: 1, weight: 1 }
     ]
   },
   "minecraft:cow": {
-    chance: 0.01,
+    chance: 1.01,
     rolls: 1,
-    variants: [
+    type: 3 /* ClimateVariant */,
+    climate_vars: [
       {
         climnate_variant: "temperate",
         loot: [
@@ -314,24 +343,21 @@ var mob_loot_table = {
       {
         climnate_variant: "warm",
         loot: [
-          { itemId: "toy:toy_cow", amount: 1, weight: 1 }
+          { itemId: "toy:toy_cow_warm", amount: 1, weight: 1 }
         ]
       },
       {
         climnate_variant: "cold",
         loot: [
-          { itemId: "toy:toy_cow", amount: 1, weight: 1 }
+          { itemId: "toy:toy_cow_cold", amount: 1, weight: 1 }
         ]
       }
-    ],
-    /* fallback for pre-1.21.70 cow */
-    loot: [
-      { itemId: "toy:toy_cow", amount: 1, weight: 1 }
     ]
   },
   "minecraft:creeper": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_creeper", amount: 1, weight: 3 },
       { itemId: "toy:toy_creeper_charged", amount: 1, weight: 1 }
@@ -340,6 +366,7 @@ var mob_loot_table = {
   "minecraft:dolphin": {
     chance: 0.3,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_dolphin", amount: 1, weight: 1 }
     ]
@@ -347,6 +374,7 @@ var mob_loot_table = {
   "minecraft:donkey": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_donkey", amount: 1, weight: 3 },
       { itemId: "toy:toy_donkey_saddled", amount: 1, weight: 2 },
@@ -356,6 +384,7 @@ var mob_loot_table = {
   "minecraft:drowned": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_drowned", amount: 1, weight: 1 }
     ]
@@ -363,6 +392,7 @@ var mob_loot_table = {
   "minecraft:elder_guardian": {
     chance: 1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_guardian_elder", amount: 1, weight: 1 }
     ]
@@ -373,6 +403,7 @@ var mob_loot_table = {
     rolls: 1,
     player_drop: true,
     /* drop at player not mob */
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_ender_dragon", amount: 1, weight: 1 }
     ]
@@ -380,6 +411,7 @@ var mob_loot_table = {
   "minecraft:enderman": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_enderman", amount: 1, weight: 1 }
     ]
@@ -387,6 +419,7 @@ var mob_loot_table = {
   "minecraft:endermite": {
     chance: 0.7,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_endermite", amount: 1, weight: 1 }
     ]
@@ -394,6 +427,7 @@ var mob_loot_table = {
   "minecraft:evocation_illager": {
     chance: 0.02,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_evoker", amount: 1, weight: 1 }
     ]
@@ -401,7 +435,8 @@ var mob_loot_table = {
   "minecraft:fox": {
     chance: 0.1,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -419,7 +454,8 @@ var mob_loot_table = {
   "minecraft:frog": {
     chance: 0.1,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -443,6 +479,7 @@ var mob_loot_table = {
   "minecraft:ghast": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_ghast", amount: 1, weight: 1 }
     ]
@@ -450,6 +487,7 @@ var mob_loot_table = {
   "minecraft:glow_squid": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_glow_squid", amount: 1, weight: 1 }
     ]
@@ -457,6 +495,7 @@ var mob_loot_table = {
   "minecraft:goat": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_goat", amount: 1, weight: 3 },
       { itemId: "toy:toy_goat_one_horn", amount: 1, weight: 1 },
@@ -466,6 +505,7 @@ var mob_loot_table = {
   "minecraft:guardian": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_guardian", amount: 1, weight: 1 }
     ]
@@ -473,6 +513,7 @@ var mob_loot_table = {
   "minecraft:hoglin": {
     chance: 0.03,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_hoglin", amount: 1, weight: 1 }
     ]
@@ -480,7 +521,8 @@ var mob_loot_table = {
   "minecraft:horse": {
     chance: 0.2,
     rolls: 1,
-    variants: [
+    type: 2 /* MarkVariant */,
+    mark_vars: [
       {
         variant: 0,
         mark_variant: 0,
@@ -766,6 +808,7 @@ var mob_loot_table = {
   "minecraft:husk": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_husk", amount: 1, weight: 1 }
     ]
@@ -773,6 +816,7 @@ var mob_loot_table = {
   "minecraft:iron_golem": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_iron_golem", amount: 1, weight: 1 }
     ]
@@ -780,7 +824,8 @@ var mob_loot_table = {
   "minecraft:llama": {
     chance: 0.25,
     rolls: 1,
-    variants: [
+    type: 2 /* MarkVariant */,
+    mark_vars: [
       /* 0: plains */
       {
         variant: 0,
@@ -879,6 +924,7 @@ var mob_loot_table = {
   "minecraft:magma_cube": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_magma_cube", amount: 1, weight: 1 }
     ]
@@ -886,7 +932,8 @@ var mob_loot_table = {
   "minecraft:mooshroom": {
     chance: 0.1,
     rolls: 1,
-    variants: [
+    type: 2 /* MarkVariant */,
+    mark_vars: [
       {
         variant: 0,
         mark_variant: -1,
@@ -906,6 +953,7 @@ var mob_loot_table = {
   "minecraft:mule": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_mule", amount: 1, weight: 2 },
       { itemId: "toy:toy_mule_saddled", amount: 1, weight: 1 },
@@ -915,6 +963,7 @@ var mob_loot_table = {
   "minecraft:ocelot": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_ocelot", amount: 1, weight: 1 }
     ]
@@ -922,7 +971,8 @@ var mob_loot_table = {
   "minecraft:panda": {
     chance: 1,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -970,7 +1020,8 @@ var mob_loot_table = {
   "minecraft:parrot": {
     chance: 0.25,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -1006,14 +1057,16 @@ var mob_loot_table = {
   "minecraft:phantom": {
     chance: 0.2,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_phantom", amount: 1, weight: 1 }
     ]
   },
   "minecraft:pig": {
-    chance: 0.01,
+    chance: 1.01,
     rolls: 1,
-    variants: [
+    type: 3 /* ClimateVariant */,
+    climate_vars: [
       {
         climnate_variant: "temperate",
         loot: [
@@ -1032,15 +1085,12 @@ var mob_loot_table = {
           { itemId: "toy:toy_pig_cold", amount: 1, weight: 1 }
         ]
       }
-    ],
-    /* fallback for pre-1.21.70 pig */
-    loot: [
-      { itemId: "toy:toy_pig", amount: 1, weight: 1 }
     ]
   },
   "minecraft:piglin_brute": {
     chance: 0.5,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_piglin_brute", amount: 1, weight: 1 }
     ]
@@ -1048,6 +1098,7 @@ var mob_loot_table = {
   "minecraft:piglin": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_piglin", amount: 1, weight: 1 }
     ]
@@ -1055,6 +1106,7 @@ var mob_loot_table = {
   "minecraft:pillager": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_pillager", amount: 1, weight: 1 }
     ]
@@ -1062,6 +1114,7 @@ var mob_loot_table = {
   "minecraft:polar_bear": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_polar_bear", amount: 1, weight: 1 }
     ]
@@ -1069,6 +1122,7 @@ var mob_loot_table = {
   "minecraft:pufferfish": {
     chance: 0.2,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_pufferfish", amount: 1, weight: 1 }
     ]
@@ -1076,7 +1130,8 @@ var mob_loot_table = {
   "minecraft:rabbit": {
     chance: 0.1,
     rolls: 1,
-    variants: [
+    type: 1 /* Variant */,
+    vars: [
       {
         variant: 0,
         loot: [
@@ -1118,6 +1173,7 @@ var mob_loot_table = {
   "minecraft:ravager": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_ravager", amount: 1, weight: 1 }
     ]
@@ -1125,6 +1181,7 @@ var mob_loot_table = {
   "minecraft:salmon": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_salmon", amount: 1, weight: 1 }
     ]
@@ -1132,6 +1189,7 @@ var mob_loot_table = {
   "minecraft:turtle": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_turtle", amount: 1, weight: 1 }
     ]
@@ -1139,6 +1197,7 @@ var mob_loot_table = {
   "minecraft:sheep": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_sheep_black", amount: 1, weight: 1 },
       { itemId: "toy:toy_sheep_blue", amount: 1, weight: 1 },
@@ -1162,6 +1221,7 @@ var mob_loot_table = {
   "minecraft:shulker": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_shulker_black", amount: 1, weight: 1 },
       { itemId: "toy:toy_shulker_blue", amount: 1, weight: 1 },
@@ -1185,6 +1245,7 @@ var mob_loot_table = {
   "minecraft:silverfish": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_silverfish", amount: 1, weight: 1 }
     ]
@@ -1192,6 +1253,7 @@ var mob_loot_table = {
   "minecraft:skeleton_horse": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_horse_skeleton", amount: 1, weight: 1 },
       { itemId: "toy:toy_horse_saddled_skeleton", amount: 1, weight: 1 }
@@ -1200,6 +1262,7 @@ var mob_loot_table = {
   "minecraft:skeleton": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_skeleton", amount: 1, weight: 1 }
     ]
@@ -1207,6 +1270,7 @@ var mob_loot_table = {
   "minecraft:slime": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_slime", amount: 1, weight: 1 }
     ]
@@ -1214,6 +1278,7 @@ var mob_loot_table = {
   "minecraft:sniffer": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_sniffer", amount: 1, weight: 1 }
     ]
@@ -1221,6 +1286,7 @@ var mob_loot_table = {
   "minecraft:snow_golem": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_snow_golem", amount: 1, weight: 1 },
       { itemId: "toy:toy_snow_golem_headless", amount: 1, weight: 1 }
@@ -1229,6 +1295,7 @@ var mob_loot_table = {
   "minecraft:spider": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_spider", amount: 1, weight: 1 }
     ]
@@ -1236,6 +1303,7 @@ var mob_loot_table = {
   "minecraft:squid": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_squid", amount: 1, weight: 1 }
     ]
@@ -1243,6 +1311,7 @@ var mob_loot_table = {
   "minecraft:stray": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_stray", amount: 1, weight: 1 }
     ]
@@ -1250,6 +1319,7 @@ var mob_loot_table = {
   "minecraft:strider": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_strider", amount: 1, weight: 1 },
       { itemId: "toy:toy_strider_suffocated", amount: 1, weight: 1 }
@@ -1258,6 +1328,7 @@ var mob_loot_table = {
   "minecraft:tadpole": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_tadpole", amount: 1, weight: 1 }
     ]
@@ -1265,7 +1336,8 @@ var mob_loot_table = {
   "minecraft:trader_llama": {
     chance: 0.25,
     rolls: 1,
-    variants: [
+    type: 2 /* MarkVariant */,
+    mark_vars: [
       {
         variant: 0,
         mark_variant: 1,
@@ -1299,6 +1371,7 @@ var mob_loot_table = {
   "minecraft:tropicalfish": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_tropical_fish", amount: 1, weight: 1 }
     ]
@@ -1306,6 +1379,7 @@ var mob_loot_table = {
   "minecraft:vex": {
     chance: 0.25,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_vex", amount: 1, weight: 1 },
       { itemId: "toy:toy_vex_charging", amount: 1, weight: 1 }
@@ -1314,7 +1388,8 @@ var mob_loot_table = {
   "minecraft:villager_v2": {
     chance: 0.3,
     rolls: 1,
-    variants: [
+    type: 2 /* MarkVariant */,
+    mark_vars: [
       /* 0: plains */
       {
         variant: 0,
@@ -2062,6 +2137,7 @@ var mob_loot_table = {
   "minecraft:vindicator": {
     chance: 0.02,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_vindicator", amount: 1, weight: 1 }
     ]
@@ -2069,6 +2145,7 @@ var mob_loot_table = {
   "minecraft:wandering_trader": {
     chance: 1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_wandering_trader", amount: 1, weight: 1 }
     ]
@@ -2076,6 +2153,7 @@ var mob_loot_table = {
   "minecraft:warden": {
     chance: 1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_warden", amount: 1, weight: 1 }
     ]
@@ -2083,6 +2161,7 @@ var mob_loot_table = {
   "minecraft:witch": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_witch", amount: 1, weight: 1 }
     ]
@@ -2090,6 +2169,7 @@ var mob_loot_table = {
   "minecraft:wither": {
     chance: 1,
     rolls: 1,
+    type: 0 /* Basic */,
     player_drop: true,
     /* drop at player not mob */
     loot: [
@@ -2100,6 +2180,7 @@ var mob_loot_table = {
   "minecraft:wither_skeleton": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_wither_skeleton", amount: 1, weight: 1 }
     ]
@@ -2107,62 +2188,7 @@ var mob_loot_table = {
   "minecraft:wolf": {
     chance: 0.25,
     rolls: 1,
-    variants: [
-      {
-        variant: 0,
-        loot: [
-          { itemId: "toy:toy_wolf", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 1,
-        loot: [
-          { itemId: "toy:toy_wolf_ashen", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 2,
-        loot: [
-          { itemId: "toy:toy_wolf_black", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 3,
-        loot: [
-          { itemId: "toy:toy_wolf_chestnut", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 4,
-        loot: [
-          { itemId: "toy:toy_wolf_rusty", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 5,
-        loot: [
-          { itemId: "toy:toy_wolf_snowy", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 6,
-        loot: [
-          { itemId: "toy:toy_wolf_spotted", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 7,
-        loot: [
-          { itemId: "toy:toy_wolf_striped", amount: 1, weight: 1 }
-        ]
-      },
-      {
-        variant: 8,
-        loot: [
-          { itemId: "toy:toy_wolf_woods", amount: 1, weight: 1 }
-        ]
-      }
-    ],
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_wolf", amount: 1, weight: 1 },
       { itemId: "toy:toy_wolf_ashen", amount: 1, weight: 1 },
@@ -2178,6 +2204,7 @@ var mob_loot_table = {
   "minecraft:zoglin": {
     chance: 0.3,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_zoglin", amount: 1, weight: 1 }
     ]
@@ -2185,6 +2212,7 @@ var mob_loot_table = {
   "minecraft:zombie_pigman": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_piglin_zombified", amount: 1, weight: 1 }
     ]
@@ -2192,6 +2220,7 @@ var mob_loot_table = {
   "minecraft:zombie_villager_v2": {
     chance: 0.05,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_zombie_villager", amount: 1, weight: 1 }
     ]
@@ -2199,6 +2228,7 @@ var mob_loot_table = {
   "minecraft:zombie": {
     chance: 0.01,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_zombie", amount: 1, weight: 1 }
     ]
@@ -2206,6 +2236,7 @@ var mob_loot_table = {
   "minecraft:zombie_horse": {
     chance: 0.1,
     rolls: 1,
+    type: 0 /* Basic */,
     loot: [
       { itemId: "toy:toy_horse_zombie", amount: 1, weight: 1 },
       { itemId: "toy:toy_horse_saddled_zombie", amount: 1, weight: 1 }

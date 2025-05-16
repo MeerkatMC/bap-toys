@@ -1,4 +1,6 @@
 {
+	"format_version": "1.21.40",
+
 	"toy_creeper_charged": {
 		"sound": "cloth"
 	},
@@ -806,6 +808,12 @@
 	"toy_pig": {
 		"sound": "cloth"
 	},
+	"toy_pig_warm": {
+		"sound": "cloth"
+	},
+	"toy_pig_cold": {
+		"sound": "cloth"
+	},
 	"toy_phantom": {
 		"sound": "cloth"
 	},
@@ -869,10 +877,22 @@
 	"toy_cow": {
 		"sound": "cloth"
 	},
+	"toy_cow_warm": {
+		"sound": "cloth"
+	},
+	"toy_cow_cold": {
+		"sound": "cloth"
+	},
 	"toy_cod": {
 		"sound": "cloth"
 	},
 	"toy_chicken": {
+		"sound": "cloth"
+	},
+	"toy_chicken_warm": {
+		"sound": "cloth"
+	},
+	"toy_chicken_cold": {
 		"sound": "cloth"
 	},
 	"toy_cat_black": {

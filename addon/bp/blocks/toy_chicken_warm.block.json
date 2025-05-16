@@ -2,7 +2,7 @@
 	"format_version": "1.20.20",
 	"minecraft:block": {
 		"description": {
-			"identifier": "toy:toy_desert_villager_cartographer",
+			"identifier": "toy:toy_chicken_warm",
 			"menu_category": {
 				"category": "items"
 			},
@@ -14,12 +14,12 @@
 		},
 		"components": {
 			"minecraft:collision_box": {
-				"origin": [-3.75, 0, -2.25],
-				"size": [7.5, 15.5, 5]
+				"origin": [-3, 0, -3],
+				"size": [6, 11, 9]
 			},
 			"minecraft:selection_box": {
-				"origin": [-3.75, 0, -2.25],
-				"size": [7.5, 15.5, 5]
+				"origin": [-3, 0, -3],
+				"size": [6, 11, 9]
 			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 0.4
@@ -27,10 +27,10 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 15
 			},
-			"minecraft:geometry": "geometry.toy_villager",
+			"minecraft:geometry": "geometry.toy_chicken_warm",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "toy_desert_villager_cartographer",
+					"texture": "toy_chicken_warm",
 					"render_method": "alpha_test"
 				}
 			},

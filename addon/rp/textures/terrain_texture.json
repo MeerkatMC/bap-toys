@@ -797,7 +797,13 @@
 			"textures": "textures/blocks/toy_polar_bear.png"
 		},
 		"toy_pig": {
-			"textures": "textures/blocks/toy_pig.png"
+			"textures": "textures/blocks/climate/toy_pig_temperate.png"
+		},
+		"toy_pig_warm": {
+			"textures": "textures/blocks/climate/toy_pig_warm.png"
+		},
+		"toy_pig_cold": {
+			"textures": "textures/blocks/climate/toy_pig_cold.png"
 		},
 		"toy_phantom": {
 			"textures": "textures/blocks/toy_phantom.png"
@@ -860,13 +866,25 @@
 			"textures": "textures/blocks/toy_creeper.png"
 		},
 		"toy_cow": {
-			"textures": "textures/blocks/toy_cow.png"
+			"textures": "textures/blocks/climate/toy_cow.png"
+		},
+		"toy_cow_warm": {
+			"textures": "textures/blocks/climate/toy_cow_warm.png"
+		},
+		"toy_cow_cold": {
+			"textures": "textures/blocks/climate/toy_cow_cold.png"
 		},
 		"toy_cod": {
 			"textures": "textures/blocks/toy_cod.png"
 		},
 		"toy_chicken": {
-			"textures": "textures/blocks/toy_chicken.png"
+			"textures": "textures/entity/chicken/chicken"
+		},
+		"toy_chicken_warm": {
+			"textures": "textures/entity/chicken/chicken_warm"
+		},
+		"toy_chicken_cold": {
+			"textures": "textures/entity/chicken/chicken_cold.png"
 		},
 		"toy_cat_black": {
 			"textures": "textures/blocks/toy_cat_black.png"

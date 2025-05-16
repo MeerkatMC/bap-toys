@@ -11,18 +11,49 @@ export type LootDrop = {
 
 export type VarDrop = {
     variant?: number;
-    climnate_variant?: string;
-    mark_variant?: number;
     loot: LootDrop [];
 };
 
-export type LootEntry = {
+export type MarkVarDrop = {
+    variant: number;
+    mark_variant: number;
+    loot: LootDrop [];
+};
+
+export type ClimateVarDrop = {
+    climnate_variant?: string;
+    loot: LootDrop [];
+};
+
+export enum LootType {
+  Basic = 0,
+  Variant = 1,
+  MarkVariant = 2,
+  ClimateVariant = 3
+};
+
+//static readonly componentId = 'minecraft:color'; like sheep...
+
+export type LootEntryOld = {
   chance: number;
   rolls: number;
+  type: LootType;
   player_drop?: boolean;
   variants?: VarDrop [];
   loot?: LootDrop [];
 };
+
+export type LootEntryBase = {
+    chance: number;
+    rolls: number;
+    player_drop?: boolean;
+};
+
+export type LootEntry =
+  | (LootEntryBase & { type: LootType.Basic; loot: LootDrop[]; })
+  | (LootEntryBase & { type: LootType.Variant; vars: VarDrop[]; })
+  | (LootEntryBase & { type: LootType.MarkVariant; mark_vars: MarkVarDrop[]; })
+  | (LootEntryBase & { type: LootType.ClimateVariant; climate_vars: ClimateVarDrop[]; });
 
 export class CustomPlayerKillMobLoot
 {
@@ -41,45 +72,63 @@ export class CustomPlayerKillMobLoot
         if ( (damagingEntity === undefined ) || ( damagingEntity.typeId !== "minecraft:player" ) )
             return;
 
-        console.log( "Looking for type", deadEntity.typeId );
-
         const mob_entry = this.loot_table[deadEntity.typeId];
         if ( mob_entry ) {
             let mob_loot_array  = null
-            let mob_loot_chance = (mob_entry.chance !== undefined ? mob_entry.chance : 0.1)
-            let mob_loot_rolls  = (mob_entry.rolls !== undefined ? mob_entry.rolls : 1)
             let mob_loot_player_drop = (mob_entry.player_drop !== undefined ? mob_entry.player_drop : false )
 
-            /* First look for variated mob loot tables.. */
-            if ( mob_entry.variants !== undefined ) {
-                let variant_component      = deadEntity.getComponent( 'minecraft:variant');
-                let mark_variant_component = deadEntity.getComponent( 'minecraft:mark_variant');
-        
-                if ( ( variant_component !== undefined ) && ( mark_variant_component === undefined ) ) {
-                    let variant_id = variant_component.value;
-                    console.log( "Looking for variant", variant_id );
-    
-                    const variant = mob_entry.variants.find(v => v.variant === variant_id);
-                    if ( variant ) mob_loot_array = variant.loot;
-                } 
-                else if ( ( variant_component !== undefined ) && ( mark_variant_component !== undefined ) ) {
-                    let variant_id = variant_component.value;
-                    let mark_id = mark_variant_component.value;
-                    console.log( "Looking for variant", variant_id, mark_id );
-    
-                    const variant = mob_entry.variants.find(v => v.variant === variant_id && v.mark_variant === mark_id );
-                    if ( variant ) mob_loot_array = variant.loot;
-                }
+            switch( mob_entry.type ){
+                case LootType.Basic:
+                    mob_loot_array = mob_entry.loot;
+                    break;
+                case LootType.Variant:
+                    {
+                        let vc = deadEntity.getComponent( 'minecraft:variant');
+                        if ( vc !== undefined )
+                        {
+                            const variant = mob_entry.vars.find(v => v.variant === vc.value);
+                            if ( variant ) {
+                                mob_loot_array = variant.loot;
+                            }
+                        }
+                    }
+                    break;
+                case LootType.MarkVariant:
+                    {
+                        let vc = deadEntity.getComponent( 'minecraft:variant'); 
+                        let mv = deadEntity.getComponent( 'minecraft:mark_variant');
+                        if ( vc !== undefined && mv !== undefined )
+                        {
+                            const variant = mob_entry.mark_vars.find(v => v.variant === vc.value && v.mark_variant === mv.value );
+                            if ( variant ) {
+                                mob_loot_array = variant.loot;
+                            }
+                        }
+                    }
+                    break;
+                case LootType.ClimateVariant:
+                    {
+                        let cv = deadEntity.getProperty( 'minecraft:climate_variant' );
+                        if ( cv !== undefined )
+                        {
+                            const variant = mob_entry.climate_vars.find( v => v.climnate_variant === cv );
+                            if ( variant ) {
+                                mob_loot_array = variant.loot;
+                                console.log("Climate Variant: ", cv );
+                            }
+                        }
+                    }
+                    break;
+                default:
+                    /* ??? */
+                    break;
             }
 
-            /* If not found look for simple or fallback loot table */
-            if ( ( mob_loot_array === null ) && ( mob_entry.loot !== undefined ) )
-                mob_loot_array = mob_entry.loot;
-    
             /* If we got a loot table then rng and spawn if successfull */
             if (mob_loot_array) {
-                const lootItem = this.get_random_loot( mob_loot_array, mob_loot_chance, mob_loot_rolls );
+                const lootItem = this.get_random_loot( mob_loot_array, mob_entry.chance, mob_entry.rolls );
                 if (lootItem) {
+                    console.log( "Spawn loot: ",  lootItem.itemId );
                     if ( mob_loot_player_drop )
                         damagingEntity.dimension.spawnItem(new ItemStack(lootItem.itemId, lootItem.amount), damagingEntity.location);    
                     else
@@ -93,10 +142,7 @@ export class CustomPlayerKillMobLoot
     {
         let random = Math.random();
 
-        console.log( "random", random );
         if ( random < mob_loot_chance ) {
-            console.log( "Mob Loot Will Drop..." );
-
             let totalWeight = mob_loot_array.reduce((sum, lootItem) => sum + lootItem.weight, 0);
             let randomLootValue = Math.random() * totalWeight;
 
@@ -105,7 +151,6 @@ export class CustomPlayerKillMobLoot
                 for (let lootItem of mob_loot_array) {
                     weightSum += lootItem.weight;
                     if (randomLootValue <= weightSum) {
-                        console.log("Loot Drop: ", lootItem.itemId);
                         return lootItem.itemId ? lootItem : null;
                     }
                 }
