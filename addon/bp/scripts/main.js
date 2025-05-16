@@ -297,7 +297,7 @@ var mob_loot_table = {
     ]
   },
   "minecraft:chicken": {
-    chance: 1.05,
+    chance: 0.05,
     rolls: 1,
     type: 3 /* ClimateVariant */,
     climate_vars: [
@@ -330,7 +330,7 @@ var mob_loot_table = {
     ]
   },
   "minecraft:cow": {
-    chance: 1.01,
+    chance: 0.01,
     rolls: 1,
     type: 3 /* ClimateVariant */,
     climate_vars: [
@@ -1063,7 +1063,7 @@ var mob_loot_table = {
     ]
   },
   "minecraft:pig": {
-    chance: 1.01,
+    chance: 0.01,
     rolls: 1,
     type: 3 /* ClimateVariant */,
     climate_vars: [
