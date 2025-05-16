@@ -1,0 +1,21 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Mob Toys v1.1.0",
+		"description": "Mob Toys RP",
+		"uuid": "8c7a3833-4262-4079-a2db-6bc18b8f43b3",
+		"version": [1, 1, 0],
+		"min_engine_version": [1, 21, 80]
+	},
+	"metadata": {
+		"authors": ["Brood591", "Meerkat"]
+	},
+	"modules": [
+		{
+			"description": "Mob Toys",
+			"type": "resources",
+			"uuid": "27a49258-2280-436c-840f-09fa17b2ebbf",
+			"version": [1, 1, 0 ]
+		}
+	]
+}

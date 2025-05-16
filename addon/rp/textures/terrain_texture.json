@@ -1,0 +1,1043 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"toy_creeper_charged": {
+			"textures": "textures/blocks/toy_creeper_charged.png"
+		},
+		"toy_tropical_fish": {
+			"textures": "textures/blocks/toy_tropical_fish.png"
+		},
+		"toy_armadillo_rolled": {
+			"textures": "textures/blocks/toy_armadillo.png"
+		},
+		"toy_desert_villager_armorer": {
+			"textures": "textures/blocks/toy_desert_villager_armorer.png"
+		},
+		"toy_desert_villager_butcher": {
+			"textures": "textures/blocks/toy_desert_villager_butcher.png"
+		},
+		"toy_desert_villager_cartographer": {
+			"textures": "textures/blocks/toy_desert_villager_cartographer.png"
+		},
+		"toy_desert_villager_cleric": {
+			"textures": "textures/blocks/toy_desert_villager_cleric.png"
+		},
+		"toy_desert_villager_farmer": {
+			"textures": "textures/blocks/toy_desert_villager_farmer.png"
+		},
+		"toy_desert_villager_fisherman": {
+			"textures": "textures/blocks/toy_desert_villager_fisherman.png"
+		},
+		"toy_desert_villager_fletcher": {
+			"textures": "textures/blocks/toy_desert_villager_fletcher.png"
+		},
+		"toy_desert_villager_leatherworker": {
+			"textures": "textures/blocks/toy_desert_villager_leatherworker.png"
+		},
+		"toy_desert_villager_librarian": {
+			"textures": "textures/blocks/toy_desert_villager_librarian.png"
+		},
+		"toy_desert_villager_nitwit": {
+			"textures": "textures/blocks/toy_desert_villager_nitwit.png"
+		},
+		"toy_desert_villager_shepherd": {
+			"textures": "textures/blocks/toy_desert_villager_shepherd.png"
+		},
+		"toy_desert_villager_stonemason": {
+			"textures": "textures/blocks/toy_desert_villager_stonemason.png"
+		},
+		"toy_desert_villager_toolsmith": {
+			"textures": "textures/blocks/toy_desert_villager_toolsmith.png"
+		},
+		"toy_desert_villager_unemployed": {
+			"textures": "textures/blocks/toy_desert_villager_unemployed.png"
+		},
+		"toy_desert_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_desert_villager_weaponsmith.png"
+		},
+		"toy_jungle_villager_armorer": {
+			"textures": "textures/blocks/toy_jungle_villager_armorer.png"
+		},
+		"toy_jungle_villager_butcher": {
+			"textures": "textures/blocks/toy_jungle_villager_butcher.png"
+		},
+		"toy_jungle_villager_cartographer": {
+			"textures": "textures/blocks/toy_jungle_villager_cartographer.png"
+		},
+		"toy_jungle_villager_cleric": {
+			"textures": "textures/blocks/toy_jungle_villager_cleric.png"
+		},
+		"toy_jungle_villager_farmer": {
+			"textures": "textures/blocks/toy_jungle_villager_farmer.png"
+		},
+		"toy_jungle_villager_fisherman": {
+			"textures": "textures/blocks/toy_jungle_villager_fisherman.png"
+		},
+		"toy_jungle_villager_fletcher": {
+			"textures": "textures/blocks/toy_jungle_villager_fletcher.png"
+		},
+		"toy_jungle_villager_leatherworker": {
+			"textures": "textures/blocks/toy_jungle_villager_leatherworker.png"
+		},
+		"toy_jungle_villager_librarian": {
+			"textures": "textures/blocks/toy_jungle_villager_librarian.png"
+		},
+		"toy_jungle_villager_nitwit": {
+			"textures": "textures/blocks/toy_jungle_villager_nitwit.png"
+		},
+		"toy_jungle_villager_shepherd": {
+			"textures": "textures/blocks/toy_jungle_villager_shepherd.png"
+		},
+		"toy_jungle_villager_stonemason": {
+			"textures": "textures/blocks/toy_jungle_villager_stonemason.png"
+		},
+		"toy_jungle_villager_toolsmith": {
+			"textures": "textures/blocks/toy_jungle_villager_toolsmith.png"
+		},
+		"toy_jungle_villager_unemployed": {
+			"textures": "textures/blocks/toy_jungle_villager_unemployed.png"
+		},
+		"toy_jungle_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_jungle_villager_weaponsmith.png"
+		},
+		"toy_plains_villager_armorer": {
+			"textures": "textures/blocks/toy_plains_villager_armorer.png"
+		},
+		"toy_plains_villager_butcher": {
+			"textures": "textures/blocks/toy_plains_villager_butcher.png"
+		},
+		"toy_plains_villager_cartographer": {
+			"textures": "textures/blocks/toy_plains_villager_cartographer.png"
+		},
+		"toy_plains_villager_cleric": {
+			"textures": "textures/blocks/toy_plains_villager_cleric.png"
+		},
+		"toy_plains_villager_farmer": {
+			"textures": "textures/blocks/toy_plains_villager_farmer.png"
+		},
+		"toy_plains_villager_fisherman": {
+			"textures": "textures/blocks/toy_plains_villager_fisherman.png"
+		},
+		"toy_plains_villager_fletcher": {
+			"textures": "textures/blocks/toy_plains_villager_fletcher.png"
+		},
+		"toy_plains_villager_leatherworker": {
+			"textures": "textures/blocks/toy_plains_villager_leatherworker.png"
+		},
+		"toy_plains_villager_librarian": {
+			"textures": "textures/blocks/toy_plains_villager_librarian.png"
+		},
+		"toy_plains_villager_nitwit": {
+			"textures": "textures/blocks/toy_plains_villager_nitwit.png"
+		},
+		"toy_plains_villager_shepherd": {
+			"textures": "textures/blocks/toy_plains_villager_shepherd.png"
+		},
+		"toy_plains_villager_stonemason": {
+			"textures": "textures/blocks/toy_plains_villager_stonemason.png"
+		},
+		"toy_plains_villager_toolsmith": {
+			"textures": "textures/blocks/toy_plains_villager_toolsmith.png"
+		},
+		"toy_plains_villager_unemployed": {
+			"textures": "textures/blocks/toy_plains_villager_unemployed.png"
+		},
+		"toy_plains_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_plains_villager_weaponsmith.png"
+		},
+		"toy_savannah_villager_armorer": {
+			"textures": "textures/blocks/toy_savannah_villager_armorer.png"
+		},
+		"toy_savannah_villager_butcher": {
+			"textures": "textures/blocks/toy_savannah_villager_butcher.png"
+		},
+		"toy_savannah_villager_cartographer": {
+			"textures": "textures/blocks/toy_savannah_villager_cartographer.png"
+		},
+		"toy_savannah_villager_cleric": {
+			"textures": "textures/blocks/toy_savannah_villager_cleric.png"
+		},
+		"toy_savannah_villager_farmer": {
+			"textures": "textures/blocks/toy_savannah_villager_farmer.png"
+		},
+		"toy_savannah_villager_fisherman": {
+			"textures": "textures/blocks/toy_savannah_villager_fisherman.png"
+		},
+		"toy_savannah_villager_fletcher": {
+			"textures": "textures/blocks/toy_savannah_villager_fletcher.png"
+		},
+		"toy_savannah_villager_leatherworker": {
+			"textures": "textures/blocks/toy_savannah_villager_leatherworker.png"
+		},
+		"toy_savannah_villager_librarian": {
+			"textures": "textures/blocks/toy_savannah_villager_librarian.png"
+		},
+		"toy_savannah_villager_nitwit": {
+			"textures": "textures/blocks/toy_savannah_villager_nitwit.png"
+		},
+		"toy_savannah_villager_shepherd": {
+			"textures": "textures/blocks/toy_savannah_villager_shepherd.png"
+		},
+		"toy_savannah_villager_stonemason": {
+			"textures": "textures/blocks/toy_savannah_villager_stonemason.png"
+		},
+		"toy_savannah_villager_toolsmith": {
+			"textures": "textures/blocks/toy_savannah_villager_toolsmith.png"
+		},
+		"toy_savannah_villager_unemployed": {
+			"textures": "textures/blocks/toy_savannah_villager_unemployed.png"
+		},
+		"toy_savannah_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_savannah_villager_weaponsmith.png"
+		},
+		"toy_snow_villager_armorer": {
+			"textures": "textures/blocks/toy_snow_villager_armorer.png"
+		},
+		"toy_snow_villager_butcher": {
+			"textures": "textures/blocks/toy_snow_villager_butcher.png"
+		},
+		"toy_snow_villager_cartographer": {
+			"textures": "textures/blocks/toy_snow_villager_cartographer.png"
+		},
+		"toy_snow_villager_cleric": {
+			"textures": "textures/blocks/toy_snow_villager_cleric.png"
+		},
+		"toy_snow_villager_farmer": {
+			"textures": "textures/blocks/toy_snow_villager_farmer.png"
+		},
+		"toy_snow_villager_fisherman": {
+			"textures": "textures/blocks/toy_snow_villager_fisherman.png"
+		},
+		"toy_snow_villager_fletcher": {
+			"textures": "textures/blocks/toy_snow_villager_fletcher.png"
+		},
+		"toy_snow_villager_leatherworker": {
+			"textures": "textures/blocks/toy_snow_villager_leatherworker.png"
+		},
+		"toy_snow_villager_librarian": {
+			"textures": "textures/blocks/toy_snow_villager_librarian.png"
+		},
+		"toy_snow_villager_nitwit": {
+			"textures": "textures/blocks/toy_snow_villager_nitwit.png"
+		},
+		"toy_snow_villager_shepherd": {
+			"textures": "textures/blocks/toy_snow_villager_shepherd.png"
+		},
+		"toy_snow_villager_stonemason": {
+			"textures": "textures/blocks/toy_snow_villager_stonemason.png"
+		},
+		"toy_snow_villager_toolsmith": {
+			"textures": "textures/blocks/toy_snow_villager_toolsmith.png"
+		},
+		"toy_snow_villager_unemployed": {
+			"textures": "textures/blocks/toy_snow_villager_unemployed.png"
+		},
+		"toy_snow_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_snow_villager_weaponsmith.png"
+		},
+		"toy_swamp_villager_armorer": {
+			"textures": "textures/blocks/toy_swamp_villager_armorer.png"
+		},
+		"toy_swamp_villager_butcher": {
+			"textures": "textures/blocks/toy_swamp_villager_butcher.png"
+		},
+		"toy_swamp_villager_cartographer": {
+			"textures": "textures/blocks/toy_swamp_villager_cartographer.png"
+		},
+		"toy_swamp_villager_cleric": {
+			"textures": "textures/blocks/toy_swamp_villager_cleric.png"
+		},
+		"toy_swamp_villager_farmer": {
+			"textures": "textures/blocks/toy_swamp_villager_farmer.png"
+		},
+		"toy_swamp_villager_fisherman": {
+			"textures": "textures/blocks/toy_swamp_villager_fisherman.png"
+		},
+		"toy_swamp_villager_fletcher": {
+			"textures": "textures/blocks/toy_swamp_villager_fletcher.png"
+		},
+		"toy_swamp_villager_leatherworker": {
+			"textures": "textures/blocks/toy_swamp_villager_leatherworker.png"
+		},
+		"toy_swamp_villager_librarian": {
+			"textures": "textures/blocks/toy_swamp_villager_librarian.png"
+		},
+		"toy_swamp_villager_nitwit": {
+			"textures": "textures/blocks/toy_swamp_villager_nitwit.png"
+		},
+		"toy_swamp_villager_shepherd": {
+			"textures": "textures/blocks/toy_swamp_villager_shepherd.png"
+		},
+		"toy_swamp_villager_stonemason": {
+			"textures": "textures/blocks/toy_swamp_villager_stonemason.png"
+		},
+		"toy_swamp_villager_toolsmith": {
+			"textures": "textures/blocks/toy_swamp_villager_toolsmith.png"
+		},
+		"toy_swamp_villager_unemployed": {
+			"textures": "textures/blocks/toy_swamp_villager_unemployed.png"
+		},
+		"toy_swamp_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_swamp_villager_weaponsmith.png"
+		},
+		"toy_tiaga_villager_armorer": {
+			"textures": "textures/blocks/toy_tiaga_villager_armorer.png"
+		},
+		"toy_tiaga_villager_butcher": {
+			"textures": "textures/blocks/toy_tiaga_villager_butcher.png"
+		},
+		"toy_tiaga_villager_cartographer": {
+			"textures": "textures/blocks/toy_tiaga_villager_cartographer.png"
+		},
+		"toy_tiaga_villager_cleric": {
+			"textures": "textures/blocks/toy_tiaga_villager_cleric.png"
+		},
+		"toy_tiaga_villager_farmer": {
+			"textures": "textures/blocks/toy_tiaga_villager_farmer.png"
+		},
+		"toy_tiaga_villager_fisherman": {
+			"textures": "textures/blocks/toy_tiaga_villager_fisherman.png"
+		},
+		"toy_tiaga_villager_fletcher": {
+			"textures": "textures/blocks/toy_tiaga_villager_fletcher.png"
+		},
+		"toy_tiaga_villager_leatherworker": {
+			"textures": "textures/blocks/toy_tiaga_villager_leatherworker.png"
+		},
+		"toy_tiaga_villager_librarian": {
+			"textures": "textures/blocks/toy_tiaga_villager_librarian.png"
+		},
+		"toy_tiaga_villager_nitwit": {
+			"textures": "textures/blocks/toy_tiaga_villager_nitwit.png"
+		},
+		"toy_tiaga_villager_shepherd": {
+			"textures": "textures/blocks/toy_tiaga_villager_shepherd.png"
+		},
+		"toy_tiaga_villager_stonemason": {
+			"textures": "textures/blocks/toy_tiaga_villager_stonemason.png"
+		},
+		"toy_tiaga_villager_toolsmith": {
+			"textures": "textures/blocks/toy_tiaga_villager_toolsmith.png"
+		},
+		"toy_tiaga_villager_unemployed": {
+			"textures": "textures/blocks/toy_tiaga_villager_unemployed.png"
+		},
+		"toy_tiaga_villager_weaponsmith": {
+			"textures": "textures/blocks/toy_tiaga_villager_weaponsmith.png"
+		},
+		"toy_spider": {
+			"textures": "textures/blocks/toy_spider.png"
+		},
+		"toy_cave_spider": {
+			"textures": "textures/blocks/toy_cave_spider.png"
+		},
+		"toy_bogged": {
+			"textures": "textures/blocks/toy_bogged.png"
+		},
+		"toy_breeze": {
+			"textures": "textures/blocks/toy_breeze.png"
+		},
+		"toy_llama_trader_brown": {
+			"textures": "textures/blocks/toy_llama_trader_brown.png"
+		},
+		"toy_llama_trader_creamy": {
+			"textures": "textures/blocks/toy_llama_trader_creamy.png"
+		},
+		"toy_llama_trader_gray": {
+			"textures": "textures/blocks/toy_llama_trader_gray.png"
+		},
+		"toy_llama_trader_white": {
+			"textures": "textures/blocks/toy_llama_trader_white.png"
+		},
+		"toy_llama_brown": {
+			"textures": "textures/blocks/toy_llama_brown.png"
+		},
+		"toy_llama_brown_black": {
+			"textures": "textures/blocks/toy_llama_brown_black.png"
+		},
+		"toy_llama_brown_blue": {
+			"textures": "textures/blocks/toy_llama_brown_blue.png"
+		},
+		"toy_llama_brown_brown": {
+			"textures": "textures/blocks/toy_llama_brown_brown.png"
+		},
+		"toy_llama_brown_cyan": {
+			"textures": "textures/blocks/toy_llama_brown_cyan.png"
+		},
+		"toy_llama_brown_gray": {
+			"textures": "textures/blocks/toy_llama_brown_gray.png"
+		},
+		"toy_llama_brown_green": {
+			"textures": "textures/blocks/toy_llama_brown_green.png"
+		},
+		"toy_llama_brown_light_blue": {
+			"textures": "textures/blocks/toy_llama_brown_light_blue.png"
+		},
+		"toy_llama_brown_lime": {
+			"textures": "textures/blocks/toy_llama_brown_lime.png"
+		},
+		"toy_llama_brown_magenta": {
+			"textures": "textures/blocks/toy_llama_brown_magenta.png"
+		},
+		"toy_llama_brown_orange": {
+			"textures": "textures/blocks/toy_llama_brown_orange.png"
+		},
+		"toy_llama_brown_pink": {
+			"textures": "textures/blocks/toy_llama_brown_pink.png"
+		},
+		"toy_llama_brown_purple": {
+			"textures": "textures/blocks/toy_llama_brown_purple.png"
+		},
+		"toy_llama_brown_red": {
+			"textures": "textures/blocks/toy_llama_brown_red.png"
+		},
+		"toy_llama_brown_light_gray": {
+			"textures": "textures/blocks/toy_llama_brown_light_gray.png"
+		},
+		"toy_llama_brown_white": {
+			"textures": "textures/blocks/toy_llama_brown_white.png"
+		},
+		"toy_llama_brown_yellow": {
+			"textures": "textures/blocks/toy_llama_brown_yellow.png"
+		},
+		"toy_llama_creamy": {
+			"textures": "textures/blocks/toy_llama_creamy.png"
+		},
+		"toy_llama_creamy_black": {
+			"textures": "textures/blocks/toy_llama_creamy_black.png"
+		},
+		"toy_llama_creamy_blue": {
+			"textures": "textures/blocks/toy_llama_creamy_blue.png"
+		},
+		"toy_llama_creamy_brown": {
+			"textures": "textures/blocks/toy_llama_creamy_brown.png"
+		},
+		"toy_llama_creamy_cyan": {
+			"textures": "textures/blocks/toy_llama_creamy_cyan.png"
+		},
+		"toy_llama_creamy_gray": {
+			"textures": "textures/blocks/toy_llama_creamy_gray.png"
+		},
+		"toy_llama_creamy_green": {
+			"textures": "textures/blocks/toy_llama_creamy_green.png"
+		},
+		"toy_llama_creamy_light_blue": {
+			"textures": "textures/blocks/toy_llama_creamy_light_blue.png"
+		},
+		"toy_llama_creamy_lime": {
+			"textures": "textures/blocks/toy_llama_creamy_lime.png"
+		},
+		"toy_llama_creamy_magenta": {
+			"textures": "textures/blocks/toy_llama_creamy_magenta.png"
+		},
+		"toy_llama_creamy_orange": {
+			"textures": "textures/blocks/toy_llama_creamy_orange.png"
+		},
+		"toy_llama_creamy_pink": {
+			"textures": "textures/blocks/toy_llama_creamy_pink.png"
+		},
+		"toy_llama_creamy_purple": {
+			"textures": "textures/blocks/toy_llama_creamy_purple.png"
+		},
+		"toy_llama_creamy_red": {
+			"textures": "textures/blocks/toy_llama_creamy_red.png"
+		},
+		"toy_llama_creamy_light_gray": {
+			"textures": "textures/blocks/toy_llama_creamy_light_gray.png"
+		},
+		"toy_llama_creamy_white": {
+			"textures": "textures/blocks/toy_llama_creamy_white.png"
+		},
+		"toy_llama_creamy_yellow": {
+			"textures": "textures/blocks/toy_llama_creamy_yellow.png"
+		},
+		"toy_llama_gray": {
+			"textures": "textures/blocks/toy_llama_gray.png"
+		},
+		"toy_llama_gray_black": {
+			"textures": "textures/blocks/toy_llama_gray_black.png"
+		},
+		"toy_llama_gray_blue": {
+			"textures": "textures/blocks/toy_llama_gray_blue.png"
+		},
+		"toy_llama_gray_brown": {
+			"textures": "textures/blocks/toy_llama_gray_brown.png"
+		},
+		"toy_llama_gray_cyan": {
+			"textures": "textures/blocks/toy_llama_gray_cyan.png"
+		},
+		"toy_llama_gray_gray": {
+			"textures": "textures/blocks/toy_llama_gray_gray.png"
+		},
+		"toy_llama_gray_green": {
+			"textures": "textures/blocks/toy_llama_gray_green.png"
+		},
+		"toy_llama_gray_light_blue": {
+			"textures": "textures/blocks/toy_llama_gray_light_blue.png"
+		},
+		"toy_llama_gray_lime": {
+			"textures": "textures/blocks/toy_llama_gray_lime.png"
+		},
+		"toy_llama_gray_magenta": {
+			"textures": "textures/blocks/toy_llama_gray_magenta.png"
+		},
+		"toy_llama_gray_orange": {
+			"textures": "textures/blocks/toy_llama_gray_orange.png"
+		},
+		"toy_llama_gray_pink": {
+			"textures": "textures/blocks/toy_llama_gray_pink.png"
+		},
+		"toy_llama_gray_purple": {
+			"textures": "textures/blocks/toy_llama_gray_purple.png"
+		},
+		"toy_llama_gray_red": {
+			"textures": "textures/blocks/toy_llama_gray_red.png"
+		},
+		"toy_llama_gray_light_gray": {
+			"textures": "textures/blocks/toy_llama_gray_light_gray.png"
+		},
+		"toy_llama_gray_white": {
+			"textures": "textures/blocks/toy_llama_gray_white.png"
+		},
+		"toy_llama_gray_yellow": {
+			"textures": "textures/blocks/toy_llama_gray_yellow.png"
+		},
+		"toy_llama_white": {
+			"textures": "textures/blocks/toy_llama_white.png"
+		},
+		"toy_llama_white_black": {
+			"textures": "textures/blocks/toy_llama_white_black.png"
+		},
+		"toy_llama_white_blue": {
+			"textures": "textures/blocks/toy_llama_white_blue.png"
+		},
+		"toy_llama_white_brown": {
+			"textures": "textures/blocks/toy_llama_white_brown.png"
+		},
+		"toy_llama_white_cyan": {
+			"textures": "textures/blocks/toy_llama_white_cyan.png"
+		},
+		"toy_llama_white_gray": {
+			"textures": "textures/blocks/toy_llama_white_gray.png"
+		},
+		"toy_llama_white_green": {
+			"textures": "textures/blocks/toy_llama_white_green.png"
+		},
+		"toy_llama_white_light_blue": {
+			"textures": "textures/blocks/toy_llama_white_light_blue.png"
+		},
+		"toy_llama_white_lime": {
+			"textures": "textures/blocks/toy_llama_white_lime.png"
+		},
+		"toy_llama_white_magenta": {
+			"textures": "textures/blocks/toy_llama_white_magenta.png"
+		},
+		"toy_llama_white_orange": {
+			"textures": "textures/blocks/toy_llama_white_orange.png"
+		},
+		"toy_llama_white_pink": {
+			"textures": "textures/blocks/toy_llama_white_pink.png"
+		},
+		"toy_llama_white_purple": {
+			"textures": "textures/blocks/toy_llama_white_purple.png"
+		},
+		"toy_llama_white_red": {
+			"textures": "textures/blocks/toy_llama_white_red.png"
+		},
+		"toy_llama_white_light_gray": {
+			"textures": "textures/blocks/toy_llama_white_light_gray.png"
+		},
+		"toy_llama_white_white": {
+			"textures": "textures/blocks/toy_llama_white_white.png"
+		},
+		"toy_llama_white_yellow": {
+			"textures": "textures/blocks/toy_llama_white_yellow.png"
+		},
+		"toy_saddled_horse": {
+			"textures": "textures/blocks/toy_saddled_horse.png"
+		},
+		"toy_horse_black": {
+			"textures": "textures/blocks/toy_horse_black.png"
+		},
+		"toy_horse_brown": {
+			"textures": "textures/blocks/toy_horse_brown.png"
+		},
+		"toy_horse_chestnut": {
+			"textures": "textures/blocks/toy_horse_chestnut.png"
+		},
+		"toy_horse_creamy": {
+			"textures": "textures/blocks/toy_horse_creamy.png"
+		},
+		"toy_horse_dark_brown": {
+			"textures": "textures/blocks/toy_horse_dark_brown.png"
+		},
+		"toy_horse_gray": {
+			"textures": "textures/blocks/toy_horse_gray.png"
+		},
+		"toy_horse_skeleton": {
+			"textures": "textures/blocks/toy_horse_skeleton.png"
+		},
+		"toy_horse_white": {
+			"textures": "textures/blocks/toy_horse_white.png"
+		},
+		"toy_horse_zombie": {
+			"textures": "textures/blocks/toy_horse_zombie.png"
+		},
+		"toy_donkey": {
+			"textures": "textures/blocks/toy_donkey.png"
+		},
+		"toy_mule": {
+			"textures": "textures/blocks/toy_mule.png"
+		},
+		"toy_wandering_trader": {
+			"textures": "textures/blocks/toy_wandering_trader.png"
+		},
+		"toy_ender_dragon": {
+			"textures": "textures/blocks/toy_ender_dragon.png"
+		},
+		"toy_iron_golem": {
+			"textures": "textures/blocks/toy_iron_golem.png"
+		},
+		"toy_wolf_ashen": {
+			"textures": "textures/blocks/toy_wolf_ashen.png"
+		},
+		"toy_wolf_black": {
+			"textures": "textures/blocks/toy_wolf_black.png"
+		},
+		"toy_wolf_chestnut": {
+			"textures": "textures/blocks/toy_wolf_chestnut.png"
+		},
+		"toy_wolf_rusty": {
+			"textures": "textures/blocks/toy_wolf_rusty.png"
+		},
+		"toy_wolf_snowy": {
+			"textures": "textures/blocks/toy_wolf_snowy.png"
+		},
+		"toy_wolf_striped": {
+			"textures": "textures/blocks/toy_wolf_striped.png"
+		},
+		"toy_wolf_spotted": {
+			"textures": "textures/blocks/toy_wolf_spotted.png"
+		},
+		"toy_wolf_woods": {
+			"textures": "textures/blocks/toy_wolf_woods.png"
+		},
+		"toy_wolf": {
+			"textures": "textures/blocks/toy_wolf.png"
+		},
+		"toy_wither_skeleton": {
+			"textures": "textures/blocks/toy_wither_skeleton.png"
+		},
+		"toy_wither_invulnerable": {
+			"textures": "textures/blocks/toy_wither_invulnerable.png"
+		},
+		"toy_wither": {
+			"textures": "textures/blocks/toy_wither.png"
+		},
+		"toy_witch": {
+			"textures": "textures/blocks/toy_witch.png"
+		},
+		"toy_turtle": {
+			"textures": "textures/blocks/toy_turtle.png"
+		},
+		"toy_stray": {
+			"textures": "textures/blocks/toy_stray.png"
+		},
+		"toy_snow_golem_headless": {
+			"textures": "textures/blocks/toy_snow_golem.png"
+		},
+		"toy_snow_golem": {
+			"textures": "textures/blocks/toy_snow_golem.png"
+		},
+		"toy_slime": {
+			"textures": "textures/blocks/toy_slime.png"
+		},
+		"toy_skeleton": {
+			"textures": "textures/blocks/toy_skeleton.png"
+		},
+		"toy_silverfish": {
+			"textures": "textures/blocks/toy_silverfish.png"
+		},
+		"toy_sheep_sheared": {
+			"textures": "textures/blocks/toy_sheep_white.png"
+		},
+		"toy_sheep_black": {
+			"textures": "textures/blocks/toy_sheep_black.png"
+		},
+		"toy_sheep_blue": {
+			"textures": "textures/blocks/toy_sheep_blue.png"
+		},
+		"toy_sheep_brown": {
+			"textures": "textures/blocks/toy_sheep_brown.png"
+		},
+		"toy_sheep_cyan": {
+			"textures": "textures/blocks/toy_sheep_cyan.png"
+		},
+		"toy_sheep_gray": {
+			"textures": "textures/blocks/toy_sheep_gray.png"
+		},
+		"toy_sheep_green": {
+			"textures": "textures/blocks/toy_sheep_green.png"
+		},
+		"toy_sheep_light_blue": {
+			"textures": "textures/blocks/toy_sheep_light_blue.png"
+		},
+		"toy_sheep_lime": {
+			"textures": "textures/blocks/toy_sheep_lime.png"
+		},
+		"toy_sheep_magenta": {
+			"textures": "textures/blocks/toy_sheep_magenta.png"
+		},
+		"toy_sheep_orange": {
+			"textures": "textures/blocks/toy_sheep_orange.png"
+		},
+		"toy_sheep_pink": {
+			"textures": "textures/blocks/toy_sheep_pink.png"
+		},
+		"toy_sheep_purple": {
+			"textures": "textures/blocks/toy_sheep_purple.png"
+		},
+		"toy_sheep_red": {
+			"textures": "textures/blocks/toy_sheep_red.png"
+		},
+		"toy_sheep_light_gray": {
+			"textures": "textures/blocks/toy_sheep_light_gray.png"
+		},
+		"toy_sheep_white": {
+			"textures": "textures/blocks/toy_sheep_white.png"
+		},
+		"toy_sheep_yellow": {
+			"textures": "textures/blocks/toy_sheep_yellow.png"
+		},
+		"toy_shulker_black": {
+			"textures": "textures/blocks/toy_shulker_black.png"
+		},
+		"toy_shulker_blue": {
+			"textures": "textures/blocks/toy_shulker_blue.png"
+		},
+		"toy_shulker_brown": {
+			"textures": "textures/blocks/toy_shulker_brown.png"
+		},
+		"toy_shulker_cyan": {
+			"textures": "textures/blocks/toy_shulker_cyan.png"
+		},
+		"toy_shulker_gray": {
+			"textures": "textures/blocks/toy_shulker_gray.png"
+		},
+		"toy_shulker_green": {
+			"textures": "textures/blocks/toy_shulker_green.png"
+		},
+		"toy_shulker_light_blue": {
+			"textures": "textures/blocks/toy_shulker_light_blue.png"
+		},
+		"toy_shulker_lime": {
+			"textures": "textures/blocks/toy_shulker_lime.png"
+		},
+		"toy_shulker_magenta": {
+			"textures": "textures/blocks/toy_shulker_magenta.png"
+		},
+		"toy_shulker_orange": {
+			"textures": "textures/blocks/toy_shulker_orange.png"
+		},
+		"toy_shulker_pink": {
+			"textures": "textures/blocks/toy_shulker_pink.png"
+		},
+		"toy_shulker_purple": {
+			"textures": "textures/blocks/toy_shulker_purple.png"
+		},
+		"toy_shulker_red": {
+			"textures": "textures/blocks/toy_shulker_red.png"
+		},
+		"toy_shulker_silver": {
+			"textures": "textures/blocks/toy_shulker_silver.png"
+		},
+		"toy_shulker_undyed": {
+			"textures": "textures/blocks/toy_shulker_undyed.png"
+		},
+		"toy_shulker_white": {
+			"textures": "textures/blocks/toy_shulker_white.png"
+		},
+		"toy_shulker_yellow": {
+			"textures": "textures/blocks/toy_shulker_yellow.png"
+		},
+		"toy_salmon": {
+			"textures": "textures/blocks/toy_salmon.png"
+		},
+		"toy_ravager": {
+			"textures": "textures/blocks/toy_ravager.png"
+		},
+		"toy_rabbit_black": {
+			"textures": "textures/blocks/toy_rabbit_black.png"
+		},
+		"toy_rabbit_brown": {
+			"textures": "textures/blocks/toy_rabbit_brown.png"
+		},
+		"toy_rabbit_gold": {
+			"textures": "textures/blocks/toy_rabbit_gold.png"
+		},
+		"toy_rabbit_salt": {
+			"textures": "textures/blocks/toy_rabbit_salt.png"
+		},
+		"toy_rabbit_toast": {
+			"textures": "textures/blocks/toy_rabbit_toast.png"
+		},
+		"toy_rabbit_white": {
+			"textures": "textures/blocks/toy_rabbit_white.png"
+		},
+		"toy_rabbit_white_splotched": {
+			"textures": "textures/blocks/toy_rabbit_white_splotched.png"
+		},
+		"toy_pufferfish": {
+			"textures": "textures/blocks/toy_pufferfish.png"
+		},
+		"toy_polar_bear": {
+			"textures": "textures/blocks/toy_polar_bear.png"
+		},
+		"toy_pig": {
+			"textures": "textures/blocks/toy_pig.png"
+		},
+		"toy_phantom": {
+			"textures": "textures/blocks/toy_phantom.png"
+		},
+		"toy_panda": {
+			"textures": "textures/blocks/toy_panda.png"
+		},
+		"toy_panda_aggressive": {
+			"textures": "textures/blocks/toy_panda_aggressive.png"
+		},
+		"toy_panda_brown": {
+			"textures": "textures/blocks/toy_panda_brown.png"
+		},
+		"toy_panda_lazy": {
+			"textures": "textures/blocks/toy_panda_lazy.png"
+		},
+		"toy_panda_playful": {
+			"textures": "textures/blocks/toy_panda_playful.png"
+		},
+		"toy_panda_sneezy": {
+			"textures": "textures/blocks/toy_panda_sneezy.png"
+		},
+		"toy_panda_worried": {
+			"textures": "textures/blocks/toy_panda_worried.png"
+		},
+		"toy_mooshroom": {
+			"textures": "textures/blocks/toy_mooshroom.png"
+		},
+		"toy_mooshroom_brown": {
+			"textures": "textures/blocks/toy_mooshroom_brown.png"
+		},
+		"toy_magma_cube": {
+			"textures": "textures/blocks/toy_magma_cube.png"
+		},
+		"toy_guardian": {
+			"textures": "textures/blocks/toy_guardian.png"
+		},
+		"toy_guardian_elder": {
+			"textures": "textures/blocks/toy_guardian_elder.png"
+		},
+		"toy_fox": {
+			"textures": "textures/blocks/toy_fox.png"
+		},
+		"toy_arctic_fox": {
+			"textures": "textures/blocks/toy_arctic_fox.png"
+		},
+		"toy_endermite": {
+			"textures": "textures/blocks/toy_endermite.png"
+		},
+		"toy_enderman": {
+			"textures": "textures/blocks/toy_enderman.png"
+		},
+		"toy_drowned": {
+			"textures": "textures/blocks/toy_drowned.png"
+		},
+		"toy_dolphin": {
+			"textures": "textures/blocks/toy_dolphin.png"
+		},
+		"toy_creeper": {
+			"textures": "textures/blocks/toy_creeper.png"
+		},
+		"toy_cow": {
+			"textures": "textures/blocks/toy_cow.png"
+		},
+		"toy_cod": {
+			"textures": "textures/blocks/toy_cod.png"
+		},
+		"toy_chicken": {
+			"textures": "textures/blocks/toy_chicken.png"
+		},
+		"toy_cat_black": {
+			"textures": "textures/blocks/toy_cat_black.png"
+		},
+		"toy_cat_british_shorthair": {
+			"textures": "textures/blocks/toy_cat_british_shorthair.png"
+		},
+		"toy_cat_calico": {
+			"textures": "textures/blocks/toy_cat_calico.png"
+		},
+		"toy_cat_jellie": {
+			"textures": "textures/blocks/toy_cat_jellie.png"
+		},
+		"toy_cat_persian": {
+			"textures": "textures/blocks/toy_cat_persian.png"
+		},
+		"toy_cat_ragdoll": {
+			"textures": "textures/blocks/toy_cat_ragdoll.png"
+		},
+		"toy_cat_red": {
+			"textures": "textures/blocks/toy_cat_red.png"
+		},
+		"toy_cat_siamese": {
+			"textures": "textures/blocks/toy_cat_siamese.png"
+		},
+		"toy_cat_tabby": {
+			"textures": "textures/blocks/toy_cat_tabby.png"
+		},
+		"toy_cat_tuxedo": {
+			"textures": "textures/blocks/toy_cat_tuxedo.png"
+		},
+		"toy_cat_white": {
+			"textures": "textures/blocks/toy_cat_white.png"
+		},
+		"toy_ocelot": {
+			"textures": "textures/blocks/toy_ocelot.png"
+		},
+		"toy_blaze": {
+			"textures": "textures/blocks/toy_blaze.png"
+		},
+		"toy_parrot_blue": {
+			"textures": "textures/blocks/toy_parrot_blue.png"
+		},
+		"toy_parrot_red_blue": {
+			"textures": "textures/blocks/toy_parrot_red_blue.png"
+		},
+		"toy_parrot_gray": {
+			"textures": "textures/blocks/toy_parrot_gray.png"
+		},
+		"toy_parrot_green": {
+			"textures": "textures/blocks/toy_parrot_green.png"
+		},
+		"toy_parrot_yellow_blue": {
+			"textures": "textures/blocks/toy_parrot_yellow_blue.png"
+		},
+		"toy_bee": {
+			"textures": "textures/blocks/toy_bee.png"
+		},
+		"toy_bee_angry": {
+			"textures": "textures/blocks/toy_bee_angry.png"
+		},
+		"toy_ghast": {
+			"textures": "textures/blocks/toy_ghast.png"
+		},
+		"toy_piglin": {
+			"textures": "textures/blocks/toy_piglin.png"
+		},
+		"toy_piglin_brute": {
+			"textures": "textures/blocks/toy_piglin_brute.png"
+		},
+		"toy_piglin_zombified": {
+			"textures": "textures/blocks/toy_piglin_zombified.png"
+		},
+		"toy_hoglin": {
+			"textures": "textures/blocks/toy_hoglin.png"
+		},
+		"toy_zoglin": {
+			"textures": "textures/blocks/toy_zoglin.png"
+		},
+		"toy_strider": {
+			"textures": "textures/blocks/toy_strider.png"
+		},
+		"toy_strider_suffocated": {
+			"textures": "textures/blocks/toy_strider_suffocated.png"
+		},
+		"toy_zombie_villager": {
+			"textures": "textures/blocks/toy_zombie_villager.png"
+		},
+		"toy_zombie": {
+			"textures": "textures/blocks/toy_zombie.png"
+		},
+		"toy_vindicator": {
+			"textures": "textures/blocks/toy_vindicator.png"
+		},
+		"toy_pillager": {
+			"textures": "textures/blocks/toy_pillager.png"
+		},
+		"toy_husk": {
+			"textures": "textures/blocks/toy_husk.png"
+		},
+		"toy_squid": {
+			"textures": "textures/blocks/toy_squid.png"
+		},
+		"toy_glow_squid": {
+			"textures": "textures/blocks/toy_glow_squid.png"
+		},
+		"toy_goat": {
+			"textures": "textures/blocks/toy_goat.png"
+		},
+		"toy_goat_one_horn": {
+			"textures": "textures/blocks/toy_goat.png"
+		},
+		"toy_goat_no_horn": {
+			"textures": "textures/blocks/toy_goat.png"
+		},
+		"toy_axolotl_gold": {
+			"textures": "textures/blocks/toy_axolotl_gold.png"
+		},
+		"toy_axolotl_cyan": {
+			"textures": "textures/blocks/toy_axolotl_cyan.png"
+		},
+		"toy_axolotl_wild": {
+			"textures": "textures/blocks/toy_axolotl_wild.png"
+		},
+		"toy_axolotl_lucy": {
+			"textures": "textures/blocks/toy_axolotl_lucy.png"
+		},
+		"toy_axolotl_blue": {
+			"textures": "textures/blocks/toy_axolotl_blue.png"
+		},
+		"toy_warden": {
+			"textures": "textures/blocks/toy_warden.png"
+		},
+		"toy_tadpole": {
+			"textures": "textures/blocks/toy_tadpole.png"
+		},
+		"toy_frog_warm": {
+			"textures": "textures/blocks/toy_frog_warm.png"
+		},
+		"toy_frog_cold": {
+			"textures": "textures/blocks/toy_frog_cold.png"
+		},
+		"toy_frog_temperate": {
+			"textures": "textures/blocks/toy_frog_temperate.png"
+		},
+		"toy_vex_charging": {
+			"textures": "textures/blocks/toy_vex_charging.png"
+		},
+		"toy_vex": {
+			"textures": "textures/blocks/toy_vex.png"
+		},
+		"toy_evoker": {
+			"textures": "textures/blocks/toy_evoker.png"
+		},
+		"toy_allay": {
+			"textures": "textures/blocks/toy_allay.png"
+		},
+		"toy_sniffer": {
+			"textures": "textures/blocks/toy_sniffer.png"
+		},
+		"toy_camel": {
+			"textures": "textures/blocks/toy_camel.png"
+		},
+		"toy_camel_saddled": {
+			"textures": "textures/blocks/toy_camel.png"
+		},
+		"toy_bat": {
+			"textures": "textures/blocks/toy_bat.png"
+		},
+		"toy_armadillo": {
+			"textures": "textures/blocks/toy_armadillo.png"
+		}
+	}
+}

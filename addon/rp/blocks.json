@@ -1,0 +1,1049 @@
+{
+	"toy_creeper_charged": {
+		"sound": "cloth"
+	},
+	"toy_tropical_fish": {
+		"sound": "cloth"
+	},
+	"toy_armadillo_rolled": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_desert_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_jungle_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_plains_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_savannah_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_snow_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_swamp_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_armorer": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_butcher": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_cartographer": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_cleric": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_farmer": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_fletcher": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_fisherman": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_leatherworker": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_librarian": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_nitwit": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_shepherd": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_stonemason": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_toolsmith": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_unemployed": {
+		"sound": "cloth"
+	},
+	"toy_tiaga_villager_weaponsmith": {
+		"sound": "cloth"
+	},
+	"toy_spider": {
+		"sound": "cloth"
+	},
+	"toy_cave_spider": {
+		"sound": "cloth"
+	},
+	"toy_bogged": {
+		"sound": "cloth"
+	},
+	"toy_breeze": {
+		"sound": "cloth"
+	},
+	"toy_llama_trader_brown": {
+		"sound": "cloth"
+	},
+	"toy_llama_trader_creamy": {
+		"sound": "cloth"
+	},
+	"toy_llama_trader_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_trader_white": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_black": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_brown": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_cyan": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_light_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_lime": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_magenta": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_orange": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_pink": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_purple": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_red": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_white": {
+		"sound": "cloth"
+	},
+	"toy_llama_brown_light_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_black": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_brown": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_cyan": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_light_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_lime": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_magenta": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_orange": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_pink": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_purple": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_red": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_white": {
+		"sound": "cloth"
+	},
+	"toy_llama_creamy_light_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_black": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_brown": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_cyan": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_light_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_lime": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_magenta": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_orange": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_pink": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_purple": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_red": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_white": {
+		"sound": "cloth"
+	},
+	"toy_llama_gray_light_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_white": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_black": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_brown": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_cyan": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_gray": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_light_blue": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_lime": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_magenta": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_orange": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_pink": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_purple": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_red": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_white": {
+		"sound": "cloth"
+	},
+	"toy_llama_white_light_gray": {
+		"sound": "cloth"
+	},
+	"toy_mule_saddle_chest": {
+		"sound": "cloth"
+	},
+	"toy_donkey_saddle_chest": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_black": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_brown": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_chestnut": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_creamy": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_gray": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_dark_brown": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_skeleton": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_zombie": {
+		"sound": "cloth"
+	},
+	"toy_horse_saddled_white": {
+		"sound": "cloth"
+	},
+	"toy_mule_saddled": {
+		"sound": "cloth"
+	},
+	"toy_donkey_saddled": {
+		"sound": "cloth"
+	},
+	"toy_horse_black": {
+		"sound": "cloth"
+	},
+	"toy_horse_brown": {
+		"sound": "cloth"
+	},
+	"toy_horse_chestnut": {
+		"sound": "cloth"
+	},
+	"toy_horse_creamy": {
+		"sound": "cloth"
+	},
+	"toy_horse_gray": {
+		"sound": "cloth"
+	},
+	"toy_horse_dark_brown": {
+		"sound": "cloth"
+	},
+	"toy_horse_skeleton": {
+		"sound": "cloth"
+	},
+	"toy_horse_zombie": {
+		"sound": "cloth"
+	},
+	"toy_horse_white": {
+		"sound": "cloth"
+	},
+	"toy_mule": {
+		"sound": "cloth"
+	},
+	"toy_donkey": {
+		"sound": "cloth"
+	},
+	"toy_wandering_trader": {
+		"sound": "cloth"
+	},
+	"toy_ender_dragon": {
+		"sound": "cloth"
+	},
+	"toy_iron_golem": {
+		"sound": "cloth"
+	},
+	"toy_wolf": {
+		"sound": "cloth"
+	},
+	"toy_wolf_ashen": {
+		"sound": "cloth"
+	},
+	"toy_wolf_black": {
+		"sound": "cloth"
+	},
+	"toy_wolf_chestnut": {
+		"sound": "cloth"
+	},
+	"toy_wolf_rusty": {
+		"sound": "cloth"
+	},
+	"toy_wolf_snowy": {
+		"sound": "cloth"
+	},
+	"toy_wolf_spotted": {
+		"sound": "cloth"
+	},
+	"toy_wolf_striped": {
+		"sound": "cloth"
+	},
+	"toy_wolf_woods": {
+		"sound": "cloth"
+	},
+	"toy_wither_skeleton": {
+		"sound": "cloth"
+	},
+	"toy_wither_invulnerable": {
+		"sound": "cloth"
+	},
+	"toy_wither": {
+		"sound": "cloth"
+	},
+	"toy_witch": {
+		"sound": "cloth"
+	},
+	"toy_turtle": {
+		"sound": "cloth"
+	},
+	"toy_stray": {
+		"sound": "cloth"
+	},
+	"toy_snow_golem_headless": {
+		"sound": "cloth"
+	},
+	"toy_snow_golem": {
+		"sound": "cloth"
+	},
+	"toy_slime": {
+		"sound": "cloth"
+	},
+	"toy_skeleton": {
+		"sound": "cloth"
+	},
+	"toy_silverfish": {
+		"sound": "cloth"
+	},
+	"toy_sheep_sheared": {
+		"sound": "cloth"
+	},
+	"toy_sheep_black": {
+		"sound": "cloth"
+	},
+	"toy_sheep_blue": {
+		"sound": "cloth"
+	},
+	"toy_sheep_brown": {
+		"sound": "cloth"
+	},
+	"toy_sheep_cyan": {
+		"sound": "cloth"
+	},
+	"toy_sheep_gray": {
+		"sound": "cloth"
+	},
+	"toy_sheep_green": {
+		"sound": "cloth"
+	},
+	"toy_sheep_light_blue": {
+		"sound": "cloth"
+	},
+	"toy_sheep_lime": {
+		"sound": "cloth"
+	},
+	"toy_sheep_magenta": {
+		"sound": "cloth"
+	},
+	"toy_sheep_orange": {
+		"sound": "cloth"
+	},
+	"toy_sheep_pink": {
+		"sound": "cloth"
+	},
+	"toy_sheep_purple": {
+		"sound": "cloth"
+	},
+	"toy_sheep_red": {
+		"sound": "cloth"
+	},
+	"toy_sheep_light_gray": {
+		"sound": "cloth"
+	},
+	"toy_sheep_white": {
+		"sound": "cloth"
+	},
+	"toy_sheep_yellow": {
+		"sound": "cloth"
+	},
+	"toy_shulker_black": {
+		"sound": "cloth"
+	},
+	"toy_shulker_blue": {
+		"sound": "cloth"
+	},
+	"toy_shulker_brown": {
+		"sound": "cloth"
+	},
+	"toy_shulker_cyan": {
+		"sound": "cloth"
+	},
+	"toy_shulker_gray": {
+		"sound": "cloth"
+	},
+	"toy_shulker_green": {
+		"sound": "cloth"
+	},
+	"toy_shulker_light_blue": {
+		"sound": "cloth"
+	},
+	"toy_shulker_lime": {
+		"sound": "cloth"
+	},
+	"toy_shulker_magenta": {
+		"sound": "cloth"
+	},
+	"toy_shulker_orange": {
+		"sound": "cloth"
+	},
+	"toy_shulker_pink": {
+		"sound": "cloth"
+	},
+	"toy_shulker_purple": {
+		"sound": "cloth"
+	},
+	"toy_shulker_red": {
+		"sound": "cloth"
+	},
+	"toy_shulker_silver": {
+		"sound": "cloth"
+	},
+	"toy_shulker_undyed": {
+		"sound": "cloth"
+	},
+	"toy_shulker_white": {
+		"sound": "cloth"
+	},
+	"toy_shulker_yellow": {
+		"sound": "cloth"
+	},
+	"toy_salmon": {
+		"sound": "cloth"
+	},
+	"toy_ravager": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_black": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_brown": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_gold": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_salt": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_toast": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_white": {
+		"sound": "cloth"
+	},
+	"toy_rabbit_white_splotched": {
+		"sound": "cloth"
+	},
+	"toy_pufferfish": {
+		"sound": "cloth"
+	},
+	"toy_polar_bear": {
+		"sound": "cloth"
+	},
+	"toy_pig": {
+		"sound": "cloth"
+	},
+	"toy_phantom": {
+		"sound": "cloth"
+	},
+	"toy_panda": {
+		"sound": "cloth"
+	},
+	"toy_panda_aggressive": {
+		"sound": "cloth"
+	},
+	"toy_panda_brown": {
+		"sound": "cloth"
+	},
+	"toy_panda_lazy": {
+		"sound": "cloth"
+	},
+	"toy_panda_playful": {
+		"sound": "cloth"
+	},
+	"toy_panda_sneezy": {
+		"sound": "cloth"
+	},
+	"toy_panda_worried": {
+		"sound": "cloth"
+	},
+	"toy_mooshroom": {
+		"sound": "cloth"
+	},
+	"toy_mooshroom_brown": {
+		"sound": "cloth"
+	},
+	"toy_magma_cube": {
+		"sound": "cloth"
+	},
+	"toy_guardian": {
+		"sound": "cloth"
+	},
+	"toy_guardian_elder": {
+		"sound": "cloth"
+	},
+	"toy_fox": {
+		"sound": "cloth"
+	},
+	"toy_arctic_fox": {
+		"sound": "cloth"
+	},
+	"toy_endermite": {
+		"sound": "cloth"
+	},
+	"toy_enderman": {
+		"sound": "cloth"
+	},
+	"toy_drowned": {
+		"sound": "cloth"
+	},
+	"toy_dolphin": {
+		"sound": "cloth"
+	},
+	"toy_creeper": {
+		"sound": "cloth"
+	},
+	"toy_cow": {
+		"sound": "cloth"
+	},
+	"toy_cod": {
+		"sound": "cloth"
+	},
+	"toy_chicken": {
+		"sound": "cloth"
+	},
+	"toy_cat_black": {
+		"sound": "cloth"
+	},
+	"toy_cat_british_shorthair": {
+		"sound": "cloth"
+	},
+	"toy_cat_calico": {
+		"sound": "cloth"
+	},
+	"toy_cat_jellie": {
+		"sound": "cloth"
+	},
+	"toy_cat_persian": {
+		"sound": "cloth"
+	},
+	"toy_cat_ragdoll": {
+		"sound": "cloth"
+	},
+	"toy_cat_red": {
+		"sound": "cloth"
+	},
+	"toy_cat_siamese": {
+		"sound": "cloth"
+	},
+	"toy_cat_tabby": {
+		"sound": "cloth"
+	},
+	"toy_cat_tuxedo": {
+		"sound": "cloth"
+	},
+	"toy_cat_white": {
+		"sound": "cloth"
+	},
+	"toy_ocelot": {
+		"sound": "cloth"
+	},
+	"toy_blaze": {
+		"sound": "cloth"
+	},
+	"toy_parrot_blue": {
+		"sound": "cloth"
+	},
+	"toy_parrot_red_blue": {
+		"sound": "cloth"
+	},
+	"toy_parrot_gray": {
+		"sound": "cloth"
+	},
+	"toy_parrot_green": {
+		"sound": "cloth"
+	},
+	"toy_parrot_yellow_blue": {
+		"sound": "cloth"
+	},
+	"toy_bee": {
+		"sound": "cloth"
+	},
+	"toy_bee_angry": {
+		"sound": "cloth"
+	},
+	"toy_ghast": {
+		"sound": "cloth"
+	},
+	"toy_piglin": {
+		"sound": "cloth"
+	},
+	"toy_piglin_brute": {
+		"sound": "cloth"
+	},
+	"toy_piglin_zombified": {
+		"sound": "cloth"
+	},
+	"toy_hoglin": {
+		"sound": "cloth"
+	},
+	"toy_zoglin": {
+		"sound": "cloth"
+	},
+	"toy_strider": {
+		"sound": "cloth"
+	},
+	"toy_strider_suffocated": {
+		"sound": "cloth"
+	},
+	"toy_zombie_villager": {
+		"sound": "cloth"
+	},
+	"toy_zombie": {
+		"sound": "cloth"
+	},
+	"toy_vindicator": {
+		"sound": "cloth"
+	},
+	"toy_pillager": {
+		"sound": "cloth"
+	},
+	"toy_husk": {
+		"sound": "cloth"
+	},
+	"toy_squid": {
+		"sound": "cloth"
+	},
+	"toy_glow_squid": {
+		"sound": "cloth"
+	},
+	"toy_goat": {
+		"sound": "cloth"
+	},
+	"toy_goat_one_horn": {
+		"sound": "cloth"
+	},
+	"toy_goat_no_horn": {
+		"sound": "cloth"
+	},
+	"toy_axolotl_gold": {
+		"sound": "cloth"
+	},
+	"toy_axolotl_cyan": {
+		"sound": "cloth"
+	},
+	"toy_axolotl_wild": {
+		"sound": "cloth"
+	},
+	"toy_axolotl_lucy": {
+		"sound": "cloth"
+	},
+	"toy_axolotl_blue": {
+		"sound": "cloth"
+	},
+	"toy_warden": {
+		"sound": "cloth"
+	},
+	"toy_tadpole": {
+		"sound": "cloth"
+	},
+	"toy_frog_warm": {
+		"sound": "cloth"
+	},
+	"toy_frog_cold": {
+		"sound": "cloth"
+	},
+	"toy_frog_temperate": {
+		"sound": "cloth"
+	},
+	"toy_vex_charging": {
+		"sound": "cloth"
+	},
+	"toy_vex": {
+		"sound": "cloth"
+	},
+	"toy_evoker": {
+		"sound": "cloth"
+	},
+	"toy_allay": {
+		"sound": "cloth"
+	},
+	"toy_sniffer": {
+		"sound": "cloth"
+	},
+	"toy_camel": {
+		"sound": "cloth"
+	},
+	"toy_camel_saddled": {
+		"sound": "cloth"
+	},
+	"toy_bat": {
+		"sound": "cloth"
+	},
+	"toy_armadillo": {
+		"sound": "cloth"
+	}
+}

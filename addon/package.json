@@ -1,0 +1,27 @@
+{
+  "name": "bap_toys",
+  "version": "1.0.7",
+  "productName": "Mob Toys Add-on",
+  "description": "Mobs drop custom toy models",
+  "private": true,
+  "devDependencies": {
+    "@minecraft/core-build-tasks": "^4.0.0",
+    "eslint-plugin-minecraft-linting": "^2.0.2",
+    "source-map": "^0.7.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "scripts": {
+    "lint": "just-scripts lint",
+    "build": "just-scripts build",
+    "clean": "just-scripts clean",
+    "local-deploy": "just-scripts local-deploy",
+    "mcaddon": "just-scripts mcaddon"
+  },
+  "dependencies": {
+	"@minecraft/math": "^1.4.0",
+    "@minecraft/server": "^1.19.0",
+    "@minecraft/server-ui": "^1.2.0",
+    "@minecraft/vanilla-data": "^1.21.20"  
+  }
+}
