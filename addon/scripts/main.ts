@@ -189,7 +189,7 @@ export const mob_loot_table: Record<string, LootEntry> = {
     ]
   },
   'minecraft:chicken': {
-    chance: 1.05,
+    chance: 0.05,
     rolls: 1,
     type: LootType.ClimateVariant,
     climate_vars: [
@@ -222,7 +222,7 @@ export const mob_loot_table: Record<string, LootEntry> = {
     ]
   },
   'minecraft:cow': {
-    chance: 1.01,
+    chance: 0.01,
     rolls: 1,
     type: LootType.ClimateVariant,
     climate_vars: [
@@ -953,7 +953,7 @@ export const mob_loot_table: Record<string, LootEntry> = {
     ]
   },
   'minecraft:pig': {
-    chance: 1.01,
+    chance: 0.01,
     rolls: 1,
     type: LootType.ClimateVariant,
     climate_vars: [
