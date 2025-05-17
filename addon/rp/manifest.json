@@ -1,10 +1,10 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Mob Toys v1.1.0",
+		"name": "Mob Toys v1.1.1",
 		"description": "Mob Toys RP",
-		"uuid": "8c7a3833-4262-4079-a2db-6bc18b8f43b3",
-		"version": [1, 1, 0],
+		"uuid": "03bb4c9b-f2ab-4573-a64b-4ba987be30e1",
+		"version": [1, 1, 1],
 		"min_engine_version": [1, 21, 80]
 	},
 	"metadata": {
@@ -14,8 +14,8 @@
 		{
 			"description": "Mob Toys",
 			"type": "resources",
-			"uuid": "27a49258-2280-436c-840f-09fa17b2ebbf",
-			"version": [1, 1, 0 ]
+			"uuid": "16dad941-7744-40b4-8417-c70e0366ac4f",
+			"version": [1, 1, 1 ]
 		}
 	]
 }

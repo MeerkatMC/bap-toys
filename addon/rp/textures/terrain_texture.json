@@ -874,6 +874,9 @@
 		"toy_cow_cold": {
 			"textures": "textures/blocks/climate/toy_cow_cold.png"
 		},
+		"toy_creaking": {
+			"textures": "textures/entity/creaking/creaking"
+		},
 		"toy_cod": {
 			"textures": "textures/blocks/toy_cod.png"
 		},

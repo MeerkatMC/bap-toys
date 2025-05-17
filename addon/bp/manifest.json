@@ -1,10 +1,10 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Mob Toys v1.1.0",
+		"name": "Mob Toys v1.1.1",
 		"description": "Mob Toys BP",
-		"uuid": "6cfffe80-a61d-46df-82d1-38380660fe0a",
-		"version": [1, 1, 0],
+		"uuid": "5ed406a8-c917-4818-ad68-1fa41f4c6060",
+		"version": [1, 1, 1],
 		"min_engine_version": [1, 21, 80]
 	},
 	"metadata": {
@@ -13,23 +13,23 @@
 	"modules": [
 		{
 			"description": "Behavior",
-			"version": [1, 0, 6],
-			"uuid": "f55ca83f-99c1-4e8b-9768-aab35a8e6a99",
+			"version": [1, 1, 1],
+			"uuid": "ff9618d3-9f26-4d76-a4d2-a6acd8f32776",
 			"type": "data"
 		},
 		{
 			"description": "Script resources",
 			"language": "javascript",
 			"type": "script",
-			"uuid": "fa28b60a-8647-48f7-98ba-74f8c59be39d",
-			"version": [1, 1, 0],
+			"uuid": "fb217d49-f33f-4719-9690-40d78df08425",
+			"version": [1, 1, 1],
 			"entry": "scripts/main.js"
 		}
 	],
 	"dependencies": [
 		{
-			"uuid": "8c7a3833-4262-4079-a2db-6bc18b8f43b3",
-			"version": [1, 1, 0]
+			"uuid": "03bb4c9b-f2ab-4573-a64b-4ba987be30e1",
+			"version": [1, 1, 1]
 		},
 		{
 			"module_name": "@minecraft/server",

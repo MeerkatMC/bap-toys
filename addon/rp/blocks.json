@@ -1063,6 +1063,9 @@
 	"toy_bat": {
 		"sound": "cloth"
 	},
+	"toy_creaking": {
+		"sound": "cloth"
+	},
 	"toy_armadillo": {
 		"sound": "cloth"
 	}

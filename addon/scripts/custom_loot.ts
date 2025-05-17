@@ -34,15 +34,6 @@ export enum LootType {
 
 //static readonly componentId = 'minecraft:color'; like sheep...
 
-export type LootEntryOld = {
-  chance: number;
-  rolls: number;
-  type: LootType;
-  player_drop?: boolean;
-  variants?: VarDrop [];
-  loot?: LootDrop [];
-};
-
 export type LootEntryBase = {
     chance: number;
     rolls: number;
